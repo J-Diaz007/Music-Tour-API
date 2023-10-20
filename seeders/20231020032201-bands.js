@@ -21,6 +21,7 @@ module.exports = {
     //  * Example:
     //  * await queryInterface.bulkDelete('People', null, {});
     // * Example below deletes everything inside the table
+    
     await queryInterface.bulkDelete('bands', null, {})
 
   }
