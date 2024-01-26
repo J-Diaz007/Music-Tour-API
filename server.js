@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
     })
 })
 
+// * CONTROLLERS
+// Requires the bands controller file and saves it to a variable named bandsController
+const bandsController = require('./controllers/bands_controller')
+// Makes it so that the bands controller is used when going to any URL starting with '/bands'.
+app.use('/bands', bandsController)
+
 // * LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
